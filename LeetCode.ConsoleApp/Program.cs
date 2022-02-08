@@ -1,7 +1,7 @@
-﻿using LeetCode.Solves.LongestSubstring;
+﻿using LeetCode.Solves.RomanInteger;
 
-LongestSubstring solve = new LongestSubstring();
+var solve = new RomanInteger();
+Console.WriteLine(solve.Solve("III"));
+Console.WriteLine(solve.Solve("LVIII"));
+Console.WriteLine(solve.Solve("MCMXCIV"));
 
-var solution = solve.Solve("dvdf");
-
-Console.WriteLine(solution);
