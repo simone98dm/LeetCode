@@ -6,18 +6,18 @@ namespace LeetCode.Solves.TwoSum
     {
         public override int[] Solve(int[] param1, int param2)
         {
-            for (var i = 0; i < param1.Length; i++)
+            int i = 0;
+            int j = i + 1;
+            while ((param1[i] + param1[j]) != param2)
             {
-                for (var j = 0; j < param1.Length; j++)
+                if (j == (param1.Length - 1))
                 {
-                    if (i != j && (param1[i] + param1[j]) == param2)
-                    {
-                        return new int[] { i, j };
-                    }
+                    i++;
+                    j = i;
                 }
+                j++;
             }
-
-            return new int[0];
+            return new int[] { i, j };
         }
     }
 }
