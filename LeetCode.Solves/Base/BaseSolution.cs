@@ -9,6 +9,10 @@ namespace LeetCode.Solves.Base
     public abstract class BaseSolution
     {
     }
+    public abstract class BaseSolution<P1> : BaseSolution, IBaseSolution<P1>
+    {
+        public abstract void Solve(P1 param);
+    }
     public abstract class BaseSolution<P1, R> : BaseSolution, IBaseSolution<P1, R>
     {
         public abstract R Solve(P1 param);

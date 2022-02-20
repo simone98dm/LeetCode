@@ -1,5 +1,9 @@
 ﻿namespace LeetCode.Solves.Base
 {
+    public interface IBaseSolution<T1>
+    {
+        void Solve(T1 param);
+    }
     public interface IBaseSolution<T1, K>
     {
         K Solve(T1 param);
